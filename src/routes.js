@@ -5,6 +5,8 @@ const randomQuote = require('./controllers/quotes/randomQuote')
 const listAuthors = require('./controllers/authors/listAuthors')
 const getAuthorById = require('./controllers/authors/getAuthorById')
 const listTags = require('./controllers/tags/listTags')
+const searchQuotes = require('./controllers/search/searchQuotes')
+const searchAuthors = require('./controllers/search/searchAuthors')
 
 const router = Router()
 
@@ -20,6 +22,12 @@ router.get('/random', randomQuote)
  **-----------------------------------------------*/
 router.get('/authors', listAuthors)
 router.get('/authors/:id', getAuthorById)
+
+/**------------------------------------------------
+ ** Search
+ **-----------------------------------------------*/
+router.get('/search/quotes', searchQuotes)
+router.get('/search/authors', searchAuthors)
 
 /**------------------------------------------------
  ** Tags
